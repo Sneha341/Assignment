@@ -1,0 +1,91 @@
+<!-- math function is to be used
+Math.abs(-4);
+Math.pow(x, y);
+Math.PI;
+Math.sin(Math.PI/2)
+Math.E;
+Math.random();    generate a  randfom number between 0 and 1
+function genRandom(min, max){
+    return Math.floor(Math.random()*(max-min + 1) + min);
+}-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Guess the Number</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            *{
+                color: rgb(6, 6, 6);
+            }
+
+            h1{
+                color: rgb(68, 58, 58);
+                font-size: 50px;
+                align-content: center;
+            }
+
+            div{
+                font-size: 30px;
+                margin-top: 50px;
+                margin-right: 500px;
+                padding: 30px;
+                background-color: rgb(203, 130, 206);
+                color: white;
+                border: solid rgb(3, 12, 5) 10px;
+                box-shadow: 10px 10px 10px rgb(7, 6, 6);
+            }
+
+            button{
+                color: darkred;
+            }
+
+            
+        </style>
+
+        <script type="text/javascript">
+            
+            let randomNumber = Math.floor(Math.random() * 1000 ) + 1;
+            
+            // Clear input field
+            function clearInput() {
+                document.getElementById("guessInput").value = "";
+            }
+            
+            // Check user's guess against random number
+            function checkGuess() {
+                let guess = parseInt(document.getElementById("guessInput").value);
+                if(guess>1 && guess<1000){
+                    if (guess === randomNumber) {
+                        alert("Congratulations! You guessed the number!");
+                        randomNumber = Math.floor(Math.random() * 1000 ) + 1;
+                        clearInput();
+                    } 
+                    
+                    else if (guess < randomNumber) {
+                        alert("Too low. Try again.");
+                        clearInput();
+                    } 
+                    
+                    else {
+                        alert("Too high. Try again.");
+                        clearInput();
+                    }
+                }
+                else{
+                    alert("Select number between 1 to 1000");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Guess the Number</h1>
+        <div>
+            <p>Type a number between 1 and 1000:</p>
+            <input type="number" id="guessInput">
+            <button onclick="checkGuess()">Submit</button>
+        </div>
+    </body>
+</html>

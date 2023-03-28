@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <style>
+          
+            #display{
+                display: flex;
+                /* display:inline-block; */
+                /* top:50%;
+                left:50%; */
+                margin:15% 40%;
+                width:20%;
+                height:40%;
+                border-radius: 7px;
+                background-color: blueviolet;
+                align-items: center;
+                justify-content: center;
+                font-size:30px;
+                color:white;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="display"> </div>
+        <script>
+            function clock()
+            {
+                d=new Date();
+                hour=d.getHours();  
+                minute=d.getMinutes();
+                seconds=d.getSeconds();
+                var hr;  
+                if(minute<10)
+                    minute="0"+minute;
+                if(seconds<10)
+                  seconds="0"+seconds;
+                if(hour>0 && hour<12)
+                    hr="AM"; 
+                else{
+                    hour=hour-12;
+                    hr="PM"
+                }
+                cTime=hour+ ":" + minute + ":" + seconds + " " + hr;
+                document.getElementById('display').innerHTML=cTime;
+            }
+           var x = setInterval(clock,1000);
+            // clearInterval(x);
+        </script>
+    </body>
+</html>

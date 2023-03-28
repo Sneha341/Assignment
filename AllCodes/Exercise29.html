@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <Style>
+            p{
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-50%,-50%);
+            }
+        </Style>
+    </head>
+    <body onload="start()">
+        <p id="demo"></p>
+        <script>
+            var var1 = setInterval(inTimer,1000); //setInterval will call the function inTimer at a interval of 1000
+            var fs = 5; //Initially font size is 5
+            var ids = document.getElementById("demo");
+            function inTimer()
+            {
+                ids.innerHTML = "TEXT GROWING";
+                ids.setAttribute('style',"font-size: "+fs+"px; color:red");//set attribute will add the particular attribute to an element
+                fs+=5;
+                if(fs>=50)
+                {
+                    clearInterval(var1);//this method stops the setInterval method
+                    var2 = setInterval(deTimer,1000);
+                }
+            }
+            function deTimer()
+            {
+                fs-=5;
+                ids.innerHTML="TEXT SHRINKING";
+                ids.setAttribute('style',"font-size: "+fs+"px;color:blue");
+                if(fs==5)
+                {
+                    clearInterval(var2);
+                }
+            }
+       </script>
+        
+    </body>
+</html>

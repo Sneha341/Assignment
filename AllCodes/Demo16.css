@@ -1,0 +1,9 @@
+body{
+    background-color: rgb(187, 192, 201);
+}
+
+.container{
+    width:250px;
+    height:150px;
+    position: relative;
+}

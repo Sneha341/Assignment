@@ -1,0 +1,113 @@
+*{
+    margin:0px;
+    padding:0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+
+}
+.container1{
+    min-height:100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(Background5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.outerbox{ 
+    width:55.5%;
+    margin: auto;
+    padding: 30px 0px;
+    
+}
+article h1{
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color:rgb(240, 237, 237);
+    overflow: hidden;
+    border-right: 3px solid whitesmoke;
+    white-space: nowrap;
+    animation: animate1 6s steps(25) infinite ;
+    
+}
+article h1::after{
+    content:"";
+    height:3px;
+    width: 550px;
+    background-color: rgb(241, 236, 236);
+    display: block;
+    margin: auto;
+}
+img{
+   margin: auto;
+   display: block;
+   margin-top: 40px;
+    width: 150px;
+    height:150px;
+    border:2px solid white;
+    top:100px;
+    left:400px;
+    border-radius: 50%;
+}
+article p{
+    margin:10px 0px;
+    color:rgb(254, 253, 246);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+article h3{
+    margin:10px 0px;
+    color:rgb(254, 253, 246);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+}
+
+ @keyframes animate1{
+   0%{
+    width:0;
+   }
+   50%{
+    width: 25ch;
+   }
+   100%{
+    width:0;
+   }
+}
+
+.container2{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(background9.jpg);
+    width:100%;
+    height:100%;
+    align-items: center;
+    position: relative;
+}
+.outerbox2{
+    background-color: rgba(211, 211, 196, 0.277);
+    width:850px;
+    height:350px;
+    position: absolute;
+    top:80px;
+    left:80px;
+    padding:70px 50px;
+    box-shadow: 10px 10px 3px rgba(174, 167, 167, 0.261);
+}
+#logo{
+    position: absolute;
+    /* z-index: 2px; */
+    padding: 5px;
+    margin: 0;
+    width:80px;
+    height:80px;
+    background-color: aliceblue;
+    top:40px;
+    left:45%;  
+}
+content p{
+    font-size: 25px;
+    text-align: justify;
+    color:cornsilk;
+}
+content p span{
+    color:coral;
+}
